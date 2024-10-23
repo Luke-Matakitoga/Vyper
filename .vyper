@@ -1,3 +1,5 @@
 {
-    "vyperadminwhitelist":"::1"
+    "whitelist":[
+        {"/vyper":"::1"}
+    ]
 }

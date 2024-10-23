@@ -6,16 +6,15 @@ const express = require('express')
 const app = express()
 const port = 80
 
-app.get("/vyper", (req, res) => {
-    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    if(conf.vyperadminwhitelist == ip){
-        res.send("You're in the Vyper backend")
-    }else{
-        res.sens("/")
-    }
-})
-
 app.get("*", (req, res) => {
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    var whitelistItem = conf.whitelist.find(item => item.hasOwnProperty(req.path));
+    console.log(whitelistItem)
+    console.log(ip)
+    if(whitelistItem != undefined && !(whitelistItem[req.path] == ip)){
+        res.send("Unauthorised Access")
+        return;
+    }
     path = `${__dirname}/htdocs${evaluatePathString(req.path)}`
     mimeType = mime.lookup(path)
     console.log(`${path} ${mimeType}`)
@@ -29,8 +28,6 @@ app.get("*", (req, res) => {
       });
     
 })
-
-
 
 function evaluatePathString(path){
     if(path.includes('.')){
