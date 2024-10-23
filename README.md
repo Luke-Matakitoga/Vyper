@@ -12,4 +12,4 @@ Git clone this repo into your working directory
     
 Then move all your web files into the ```htdocs/``` directory.
 
-Open up your terminal in the root directory and run ```npm start``` and navigate to ```http://localhost``` to see your site in action!
+Open up your terminal in the root directory and run ```npn install && npm start``` and navigate to ```http://localhost``` to see your site in action!
