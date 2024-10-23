@@ -1,5 +1,6 @@
 {
     "whitelist":[
         {"/vyper":"::1"}
-    ]
+    ],
+    "port":80
 }

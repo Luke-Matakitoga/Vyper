@@ -4,7 +4,7 @@ const sass = require('sass');
 const conf = JSON.parse(fs.readFileSync(".vyper", 'utf8'))
 const express = require('express')
 const app = express()
-const port = 80
+const port = conf.port
 
 app.get("*", (req, res) => {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
