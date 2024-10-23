@@ -11,7 +11,7 @@ app.get("*", (req, res) => {
     var whitelistItem = conf.whitelist.find(item => item.hasOwnProperty(req.path));
     console.log(whitelistItem)
     console.log(ip)
-    if(whitelistItem != undefined && !(whitelistItem[req.path] == ip)){
+    if(whitelistItem != undefined && !(whitelistItem[req.path].includes(ip))){
         res.send("Unauthorised Access")
         return;
     }
