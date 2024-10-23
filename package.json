@@ -1,0 +1,18 @@
+{
+  "name": "vyper",
+  "version": "1.0.0",
+  "description": "A lightweight HTTP server built on Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Luke-Matakitoga",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mime": "^4.0.4",
+    "mime-types": "^2.1.35",
+    "sass": "^1.80.3"
+  }
+}
