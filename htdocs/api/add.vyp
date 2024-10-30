@@ -1,0 +1,3 @@
+const req = REQUEST_POST
+
+return parseInt(req.a) + parseInt(req.b)
