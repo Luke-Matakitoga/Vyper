@@ -1,5 +1,5 @@
 # Vyper
-A lightweight HTTP server built on Node.js
+A lightweight HTTP server built on Node.js implementing server-side VYP
 
 
 ## Installation
